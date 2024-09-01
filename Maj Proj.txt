@@ -1,0 +1,19 @@
+01-09-2024 Plan of Action
+
+1) Software : 
+
+various models used : 
+ (1) Video processing for action recognition - MoViNet for streaming action recognition
+ (2) Image processing model to recognise fights in the image 
+ (3) Object detection model to determine harmful objects
+ (4) Blood recognition through image
+
+Combining these 4 models to complete the final layer of neural network and acting according to the probability of the output model.
+
+2) Networking
+
+If load is high using distributed computing to run the models. Find the maximum N/W speed required.
+
+3) Hardware
+
+Connect raspberry pi 3B+ with Rpi camera module along with buzzer and PIR sensors. Connecting an internal N/W using Iot to connect different devices and streaming video on a website.
