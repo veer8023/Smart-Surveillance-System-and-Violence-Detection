@@ -1,7 +1,20 @@
+import os
+import warnings
+import tensorflow as tf
+
+# Suppress oneDNN custom operations warning
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
+# Suppress TensorFlow deprecation warnings
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+
+# Suppress all Python deprecation warnings
+warnings.filterwarnings('ignore', category=DeprecationWarning)
+
+
 import cv2
 import numpy as np
 import tensorflow_hub as hub
-import tensorflow as tf
 
 # Load TensorFlow Hub model (SSD MobileNet V2)
 print("[INFO] Loading TensorFlow Hub model...")
